@@ -18,7 +18,7 @@ class User < ApplicationRecord
                     inverse_friendships.map{ |friendship| friendship.user if friendship.status_confirm }
     friends_array.compact
   end
-  
+
   def pending_friends
     friendships.map{ |friendship| friendship.friend unless friendship.status_confirm }.compact
   end
@@ -35,9 +35,5 @@ class User < ApplicationRecord
 
   def friend?(user)
     friends.include?(user)
-  end
-
-  def invite_friend(user)
-    Friendship.create(user_id: id, friend_id: user.id, status_confirm: false)
   end
 end

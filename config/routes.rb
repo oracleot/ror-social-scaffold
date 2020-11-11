@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get 'invite_friend/:id', to: 'users#invite_friend', as: :invite_friend
+
   resources :users, only: [:index, :show]
   resources :posts, only: [:index, :create] do
     resources :comments, only: [:create]
