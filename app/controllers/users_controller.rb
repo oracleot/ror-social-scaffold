@@ -13,6 +13,6 @@ class UsersController < ApplicationController
   def invite_friend
     user = User.find(params[:id])
     Friendship.create(user_id: current_user.id, friend_id: user.id, status_confirm: false)
-    redirect_to root_path
+    redirect_to root_path, notice: 'Friendship invite sent'
   end
 end
