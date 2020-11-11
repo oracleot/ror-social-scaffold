@@ -36,4 +36,8 @@ class User < ApplicationRecord
   def friend?(user)
     friends.include?(user)
   end
+
+  def invite_friend(user)
+    Friendship.create(user_id: id, friend_id: user.id, status_confirm: false)
+  end
 end

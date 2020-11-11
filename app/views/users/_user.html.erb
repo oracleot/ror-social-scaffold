@@ -3,4 +3,7 @@
   <span class="profile-link">
     <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
   </span>
+  <% unless user.friend?(user) %>
+    <%= link_to "Invite to friendship", root_path, class: 'profile-link' %>
+  <% end %>
 </li>
