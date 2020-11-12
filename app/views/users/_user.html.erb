@@ -3,5 +3,5 @@
   <span class="profile-link">
     <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
   </span>    
-  <%= render partial: 'invite', :locals => {:user => user} %>
+  <%= invite_links(user) %>
 </li>
