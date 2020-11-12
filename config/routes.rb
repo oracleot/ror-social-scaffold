@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'invite_friend/:id', to: 'users#invite_friend', as: :invite_friend
   get 'confirm_friend/:id', to: 'users#confirm_friend', as: :confirm_friend
+  get 'reject_friendship/:id', to: 'users#reject_friendship', as: :reject_friendship
   get 'pending_friends', to: 'users#pending_friends', as: :pending_friends
   resources :users, only: %i[index show]
   resources :posts, only: %i[index create] do

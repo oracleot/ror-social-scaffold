@@ -1,5 +1,6 @@
 <% if current_user.friend_requests.include?(user) %>
   <%= link_to "Accept friendship", confirm_friend_path(user), class: 'profile-link' %>
+  <%= link_to "Reject friendship", reject_friendship_path(user), class: 'profile-link' %>
 <% elsif !current_user.pending_friends.include?(user) && current_user!=user && !current_user.friend?(user) %>
   <%= link_to "Invite to friendship", invite_friend_path(user), class: 'profile-link' %>
 <% end %>

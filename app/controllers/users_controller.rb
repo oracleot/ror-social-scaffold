@@ -22,6 +22,12 @@ class UsersController < ApplicationController
     redirect_to user, notice: 'Accepted friend request'
   end
 
+  def reject_friendship
+    user = User.find(params[:id])
+    current_user.reject_friendship(user)
+    redirect_to root_path, notice: 'Rejected friend request'
+  end
+
   def pending_friends
     @pending_friends = current_user.pending_friends
   end
