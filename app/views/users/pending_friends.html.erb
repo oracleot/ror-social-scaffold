@@ -1,0 +1,15 @@
+<section class="users-section">
+  <% if @pending_friends.empty? %>
+    <p>No pending friends.</p>
+  <% else %>
+    <ul class="users-list">
+      <% @pending_friends.each do |friend| %>
+        <li>Name: <%= friend.name %>
+          <span class="profile-link">
+            <%= link_to 'See Profile',  user_path(friend), class: 'profile-link' %>
+          </span>    
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>

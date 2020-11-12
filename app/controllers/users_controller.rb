@@ -21,4 +21,8 @@ class UsersController < ApplicationController
     current_user.confirm_friend(user)
     redirect_to user, notice: 'Accepted friend request'
   end
+
+  def pending_friends
+    @pending_friends = current_user.pending_friends
+  end
 end
