@@ -16,6 +16,7 @@ module UserHelper
   def invite_links(user)
     if current_user.friend_requests.include?(user)
       concat link_to 'Accept friendship', confirm_friend_path(user), class: 'profile-link'
+      concat ' '
       concat link_to 'Reject friendship', reject_friendship_path(user), class: 'profile-link'
     elsif !current_user.pending_friends.include?(user) && current_user != user && !current_user.friend?(user)
       concat link_to 'Invite to friendship', invite_friend_path(user), class: 'profile-link'
