@@ -10,7 +10,7 @@ RSpec.describe 'Session', type: :system do
       expect(page).to have_content 'Sign in'
     end
     it 'logs in valid user' do
-      user = User.create(name: 'test', email: 'test@test.com', password: '123456')
+      User.create(name: 'test', email: 'test@test.com', password: '123456')
       fill_in 'user[email]', with: 'test@test.com'
       fill_in 'user[password]', with: '123456'
     end
