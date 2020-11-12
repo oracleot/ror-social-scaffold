@@ -44,6 +44,8 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Add RSpec Rails
   gem 'rspec-rails', '~> 4.0.0'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :test do
