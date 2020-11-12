@@ -24,4 +24,8 @@ module ApplicationHelper
       link_to 'Sign in', user_session_path
     end
   end
+
+  def pending_friends_link
+    content_tag(:div, (menu_link_to 'Pending friends', pending_friends_path), class: 'menu-item') if user_signed_in?
+  end
 end
