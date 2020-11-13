@@ -1,4 +1,4 @@
-# Social media website
+# Mighty Social
 
 > The scope of this project was to build a mini social network similar to Twitter, which allows users to post and connect with each other.
 
@@ -21,6 +21,10 @@ The app has the following features:
 - Rails
 - Ruby
 - RSpec
+
+## Live Demo
+
+[Visit Mighty Social](https://mighty-social.herokuapp.com/)
 
 ## Getting Started
 
