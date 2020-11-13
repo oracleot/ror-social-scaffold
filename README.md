@@ -1,93 +1,75 @@
-# Scaffold for social media app with Ruby on Rails
+# Social media website
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> The scope of this project was to build a mini social network similar to Twitter, which allows users to post and connect with each other.
+
+![App Screenshot](./app_screenshot.png)
+
+The app has the following features:
+
+- User can create account/log in
+- Guest user can only visit the Sign In and Sign Out pages
+- Logged-in user can see a list of the users on the app
+- Logged-in user can view profiles of all users and their posts
+- Logged-in user can create posts (text only) and get likes / dislikes, and also like posts from friends
+- Logged-in user has a timeline where he/she can see ONLY posts from friends
+- Logged-in user can add comments to posts
+- Logged-in user can send a friendship invitation and also receive invitations from other friends
+- Logged-in user can decide to Accept / Reject friendship invitations
 
 ## Built With
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
-
-## Live Demo
-
-TBA
-
+- Rails
+- Ruby
+- RSpec
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+To get this project up and running locally, you must already have ruby and necessary gems installed on your computer
 
-### Setup
+To get this project set up on your local machine, follow these simple steps:
 
-Instal gems with:
+1. Open Terminal
+2. Clone the repository `git clone https://github.com/oracleot/ror-social-scaffold.git`
+3. Move into project directory `cd ror-social-scaffold`
+4. Install required gems `bundle install`
+5. Create database `rails db:create`
+6. Run database migration `rails db:migrate`
+7. Start your server `rails server`
+8. Run the app `http://localhost:3000`
 
-```
-bundle install
-```
+### Testing
 
-Setup database with:
+RSpec was used for testing and several test use cases have been created. To test, simply follow the instructions below:
 
-```
-   rails db:create
-   rails db:migrate
-```
-
-### Github Actions
-
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
-
-### Usage
-
-Start server with:
-
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
-
-### Run tests
-
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
+1. Open Terminal
+2. Make sure you are in the root directory, if not `cd ror-social-scaffold`
+3. Run `rspec` in your terminal to run all tests
+4. Alternatively, feel free to run each test separately by running `rspec spec/path_to_test` E.g `rspec spec/models/comment_spec.rb`
+5. Watch all tests / specific tests pass
 
 ## Authors
 
-TBA
+👤 **Meron Ogbai**
+
+- Github: [@meronokbay](https://github.com/meronokbay)
+- Twitter: [@MeronDev](https://twitter.com/MeronDev)
+- Linkedin: [linkedin](https://linkedin.com/in/meron-ogbai/)
+
+👤 **Damilola Oduronbi**
+
+- Github: [@oracleot](https://github.com/oracleot)
+- Linkedin: [linkedin](https://linkedin.com/in/doduronbi/)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
+Contributions, issues, and feature requests are welcome!
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-TBA
-
 ## 📝 License
 
-TBA
-
+This project is [MIT](lic.url) licensed.
