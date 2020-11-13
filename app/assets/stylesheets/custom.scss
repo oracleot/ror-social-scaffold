@@ -289,6 +289,19 @@ form {
     font-size: 0.8em;
     margin: 0 0 8px 0;
     color: $primary-color-dark;
+
+    .invite {
+      color: maroon;
+    }
+
+    .accept {
+      color: blue;
+      font-weight: bold;
+    }
+
+    .reject {
+      color: red;
+    }
   }
 }
 
