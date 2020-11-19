@@ -7,7 +7,7 @@
 The app has the following features:
 
 - User can create account/log in
-- Guest user can only visit the Sign In and Sign Out pages
+- Guest user can only visit the Sign In and Sign Up pages
 - Logged-in user can see a list of the users on the app
 - Logged-in user can view profiles of all users and their posts
 - Logged-in user can create posts (text only) and get likes / dislikes, and also like posts from friends
